@@ -80,7 +80,8 @@ class BinaryTree:
                     if current_node.left is not None and current_node.right is None:  # Если есть один потомок левый
                         previous_node.right = current_node.left
                         return
-                    return
+                    if current_node.left is not None and current_node.right is not None:  # Есть оба ребёнка
+                        return
 
     def get_max(self) -> Node:
         """Max index"""
